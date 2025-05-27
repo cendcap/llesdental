@@ -1,0 +1,50 @@
+.login-background {
+  background-image: url('/assets/img/4.jpg'); /* Ruta relativa a tu carpeta de assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 140px;
+    
+    /*background-color: #f0007f;*/
+    background-image: url('/assets/img/6.jpg');
+    border-right: 1px solid #ccc; /* Delimita la sección */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  }
+  
+  mat-sidenav-content {
+    background-color: #fff;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  .main-content {
+    padding: 1.5rem;
+  }

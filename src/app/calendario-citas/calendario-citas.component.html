@@ -1,0 +1,19 @@
+<div *ngIf="isBrowser" class="calendar-container">
+    <h2 class="calendar-title">Calendario de Citas</h2>
+  
+    <!-- Leyenda -->
+    <div class="legend">
+      <div class="legend-item">
+        <span class="color-box green"></span> Reservado
+      </div>
+      <div class="legend-item">
+        <span class="color-box yellow"></span> Atendiendo
+      </div>
+      <div class="legend-item">
+        <span class="color-box blue"></span> Atendido
+      </div>
+    </div>
+  
+    <!-- Calendario -->
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>

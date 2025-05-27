@@ -1,0 +1,48 @@
+1. Diseño de la Vista Principal
+╔════════════════════════════════════════════════════════════════════════════╗
+║                            Panel del Administrador                        ║
+╠════════════════════╦══════════════════════════════════════════════════════╣
+║   Sidebar          ║  [Nombre del Paciente]  [Edad]  [Sexo]               ║
+║  ┌──────────────┐  ║------------------------------------------------------║
+║  │ Dashboard     │  ║ Tabs: [Historial Clínico] [Odontograma]             ║
+║  │ Pacientes     │  ║                                                    ║
+║  │ Citas         │  ║────────────────────────────────────────────────────║
+║  │ Configuración │  ║                                                    ║
+║  └──────────────┘  ║   Contenido dinámico según el tab seleccionado       ║
+╚════════════════════╩══════════════════════════════════════════════════════╝
+
+ 2. Mockup: Tab “Historial Clínico”
+╔═══════════════════════════════════════════════════════════════════════════╗
+║ HISTORIAL CLÍNICO                                                        ║
+╟───────────────────────────────────────────────────────────────────────────╢
+║ Observaciones anteriores:                                                ║
+║ - [08/04/2025] Limpieza realizada sin complicaciones.                    ║
+║ - [15/03/2025] Caries en pieza 24 tratada con obturación.               ║
+║                                                                         ║
+║ Nueva Observación:                                                      ║
+║ [______________________________________________________________]        ║
+║ [Guardar Observación]                                                  ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+🦷 3. Mockup: Tab “Odontograma”
+╔═══════════════════════════════════════════════════════════════════════════╗
+║ ODONTOGRAMA                                                              ║
+╟───────────────────────────────────────────────────────────────────────────╢
+║ 🗓 Versión: [08/05/2023 ▼]  [Crear Nueva Versión] [🗑 Eliminar]           ║
+║                                                                         ║
+║        ⬅️ SVG / Canvas con piezas dentales según edad del paciente       ║
+║                                                                         ║
+║ Leyenda:                                                                ║
+║ ❌ Diente Ausente  🔵 Caries  🟦 Obturación  IM Implante  🦷 Corona ...   ║
+╟───────────────────────────────────────────────────────────────────────────╢
+║ Observaciones del Odontograma (por versión):                            ║
+║ - Hacer limpieza en el próximo control.                                 ║
+║ [Editar observación]                                                    ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+🧠 Consideración Automática por Edad
+En el backend o frontend, al acceder al paciente se calcula su edad automáticamente:
+
+const edad = calcularEdad(paciente.fechaNacimiento);
+if (edad <= 6) cargarOdontograma("temporal");
+else if (edad <= 12) cargarOdontograma("mixto");
+else cargarOdontograma("adulto");

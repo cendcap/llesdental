@@ -1,0 +1,44 @@
+.calendar-container {
+  padding: 16px;
+}
+
+.calendar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+::ng-deep .fc-toolbar-title {
+  text-transform: uppercase;
+}

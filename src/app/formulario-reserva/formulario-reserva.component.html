@@ -1,0 +1,17 @@
+<form [formGroup]="reservaForm" (ngSubmit)="enviarFormulario()">
+  <h2>Reservar una cita</h2>
+
+  <label for="fecha">Fecha</label>
+  <input type="date" id="fecha" formControlName="fecha" [min]="minDate" required />
+
+  <label for="hora">Hora</label>
+  <select id="hora" formControlName="hora" required>
+    <option value="">Selecciona una hora</option>
+    <option *ngFor="let hora of horasDisponiblesFiltradas" [value]="hora">
+      {{ hora }}
+    </option>
+  </select>
+
+  <button type="submit">Reservar</button>
+</form>
+

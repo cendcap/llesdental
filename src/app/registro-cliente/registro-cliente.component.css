@@ -1,0 +1,100 @@
+.registro-background {
+  background-image: url('/assets/img/6.jpg'); /* Ruta relativa a tu carpeta de assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.registro-container {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.registro-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registro-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registro-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.registro-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.registro-container button:hover {
+  background-color: #0056b3;
+}
+
+
+ngx-intl-tel-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+ngx-intl-tel-input .iti {
+  width: 100%;
+  border: 1px solid #ccc; /* Añadimos el borde al contenedor iti */
+  border-radius: 8px; /* Añadimos el radio del borde */
+  box-shadow: none !important; /* También quitamos cualquier sombra */
+}
+
+ngx-intl-tel-input .iti__input-container {
+  border: none !important; /* Volvemos a intentar quitar el borde del contenedor del input interno */
+}
+
+ngx-intl-tel-input input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none !important; /* Quitamos el borde del input interno, ya lo tiene el contenedor iti */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding-left: 48px;
+  box-shadow: none !important; /* Quitamos cualquier sombra predeterminada */
+}
+
+ngx-intl-tel-input input:focus {
+  outline: none;
+  border-color: #4a90e2 !important; /* Forzamos el color del borde al enfocar */
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5) !important; /* Forzamos la sombra al enfocar */
+  transform: scale(1.02);
+}
+
+/* Estilos para la lista de países */
+ngx-intl-tel-input .iti__country-list {
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ngx-intl-tel-input .iti__selected-flag {
+  border: none !important;
+}
+
+ngx-intl-tel-input .country-list {
+  max-height: 200px; /* Ajusta la altura máxima según necesites */
+  overflow-y: auto; /* Añade una barra de scroll vertical cuando el contenido exceda la altura máxima */
+  overflow-x: hidden; /* Oculta la barra de scroll horizontal si no es necesaria */
+}

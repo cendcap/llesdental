@@ -1,0 +1,8 @@
+<div class="admin-form-container">
+  <form [formGroup]="adminForm" (ngSubmit)="crearAdministrador()">
+    <input formControlName="nombre_usuario" placeholder="Usuario" type="text" required />
+    <input formControlName="password" placeholder="Contraseña" type="password" required />
+    <button type="submit">Crear Admin</button>
+  </form>
+  </div>
+  
