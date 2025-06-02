@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/": {},
+    "/crear-admin": {},
+    "/dashboard": {},
+    "/dashboard-cliente": {},
+    "/dashboard-cliente/clientes": {},
+    "/dashboard-cliente/representados": {},
+    "/login": {},
+    "/registro-cliente": {}
+  }
+}
