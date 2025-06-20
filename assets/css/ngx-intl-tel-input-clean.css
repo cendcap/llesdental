@@ -1,0 +1,73 @@
+
+/* Estilo general para el input */
+ngx-intl-tel-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+ngx-intl-tel-input .iti {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+ngx-intl-tel-input input {
+  width: 100%;
+  padding: 10px 10px 10px 48px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+}
+
+ngx-intl-tel-input input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+ngx-intl-tel-input .iti__flag-container {
+  padding-left: 10px;
+}
+
+ngx-intl-tel-input .iti__selected-flag {
+  border-right: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px 0 0 8px;
+}
+
+ngx-intl-tel-input .iti__country-list {
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 10000 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.iti__flag {
+  height: 15px;
+  box-shadow: 0 0 1px 0 #888;
+  background-image: url("/assets/img/intl-tel-input/flags.png");
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+}
+
+@media (min-resolution: 2x) {
+  .iti__flag {
+    background-image: url("/assets/img/intl-tel-input/flags@2x.png");
+  }
+}
+
+.iti__globe {
+  background-image: url("/assets/img/intl-tel-input/globe.png");
+  background-size: contain;
+  background-position: right;
+  box-shadow: none;
+  height: 19px;
+}
+
+@media (min-resolution: 2x) {
+  .iti__globe {
+    background-image: url("/assets/img/intl-tel-input/globe@2x.png");
+  }
+}
